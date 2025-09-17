@@ -1,0 +1,12 @@
+Flask==3.0.3
+flask-cors==4.0.0
+python-dotenv==1.0.0
+numpy==1.24.3
+langchain-openai==0.1.8
+pymongo==4.7.3
+pydantic==2.7.1
+google-cloud-translate==3.15.3
+google-cloud-texttospeech==2.16.3
+google-cloud-speech==2.21.0
+firebase-admin==6.2.0
+gunicorn==21.2.0
