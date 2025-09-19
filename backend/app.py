@@ -853,14 +853,14 @@ def get_chat_history():
 
 
 
+try:
+    initialize_app()
+    print("Application initialized successfully!")
+    print(f"Supported languages: {ALLOWED_LANGUAGES}")
+except Exception as e:
+    print(f"Failed to initialize application: {e}")
+    raise
 
-if __name__ == "__main__":
-    try:
-        initialize_app()
-        print("Application initialized successfully!")
-        port = int(os.environ.get("PORT", 5000))
-        app.run(host="0.0.0.0", port=port, debug=False)
-    except Exception as e:
-        print(f"Failed to initialize application: {e}")
-        raise
-
+if __name__ == "__main__":    
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
