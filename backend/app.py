@@ -177,9 +177,7 @@ def initialize_session():
 @app.route("/")
 def index():
     initialize_session()
-    return render_template(
-        "index.html", supported_languages=SUPPORTED_LANGUAGES, selected_language=session["selected_language"]
-    )
+    return jsonify({"status": "Backend is running on Render!"})
 
 
 @app.route("/api/set_language", methods=["POST"])
@@ -865,3 +863,4 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"Failed to initialize application: {e}")
         raise
+
